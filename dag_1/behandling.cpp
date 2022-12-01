@@ -39,6 +39,7 @@ int main() {
          }
 
       }
+      cout<<"\nThe max sum is: "<<maxsum;
       cout<<"\nThe three max sums are: "<<maxsum<<" "<<maxsum2<<" "<<maxsum3<<"\n"<<"The total sum is: "<<maxsum+maxsum2+maxsum3<<"\n";
       }
 

@@ -4,20 +4,11 @@
 using namespace std;
 
 int main() {
-
-
+    
     int sum = 0;
     int maxsum = 0;
     int maxsum2 = 0;
     int maxsum3 = 0;
-
-
-
-    int index = 1;
-    int maxindex = 1;
-
-
-
 
     fstream data;
 

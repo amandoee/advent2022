@@ -78,45 +78,68 @@ int main () {
 	//Del 2;
 	fstream input2;
 	sum = 0;
+		cout<<"The sum is: "<<sum<<"\n";
 
 	int length1;
 	int length2;
 	int length3;
-	bool found=false;
 
 	input2.open("input.txt",ios::in);
 	if (input2.is_open()) {
 		string linje;
 		string nylinje;
+
+		string linje1;
+		string linje2;
+		string linje3;
+		string what;
+
+		string biggest_linje;
+		bool found= false;
+
+
+
 		int counter = 0;	
 		while (getline(input2,linje)) {
 			if (counter==0) {
 				length1=linje.size();
 				nylinje=linje;
+				linje1 = linje;
+
 				counter++;
 			} else if (counter==1) {
 				length2=linje.size();
+				linje2=linje;
 				nylinje+=linje;
 				counter++;
 			} else if (counter==2) {
 				length3=linje.size();
 				nylinje+=linje;
+				linje3=linje;
 				counter++;
 			} 
 			
 			if (counter==3) {
 				
-				for (int i =0;i<find_max_length(length1,length2,length3) && found==false; i++) {
-					for (int j =0;j<find_max_length(length1,length2,length3) && found==false; j++) {
-						for (int k =0;k<find_max_length(length1,length2,length3) && found==false; k++) {
-					
-							if (nylinje[i]==nylinje[j+length1] && nylinje[i]==nylinje[k+length2] && found==false) {
-								duplicate=nylinje[i];
-								sum+=char_to_value(duplicate);
-								found=true;
-							}
-						}
+				if (find_max_length(length1,length2,length3)==length1) {
+						biggest_linje=linje1;
+					} else if (find_max_length(length1,length2,length3)==length2) {
+						biggest_linje=linje2;
+					} else {
+						biggest_linje=linje3;
 					}
+
+				for (int i =0;i<(biggest_linje.size()); i++) {
+				//Check om linjer er npos eller ej.	
+				
+					if (found==false && linje1.find(biggest_linje[i])!=std::string::npos && linje2.find(biggest_linje[i])!=std::string::npos && linje3.find(biggest_linje[i])!=std::string::npos) {
+						//if statement er forkert. Finder 'r' i 2. omgang, ved 5. linje.
+						duplicate = biggest_linje[i];
+						sum += char_to_value(duplicate);
+						
+						found=true;
+					}
+					
 				}
 				nylinje="";
 				counter=0;

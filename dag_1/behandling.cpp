@@ -23,7 +23,6 @@ int main() {
             if (sum>maxsum) {maxsum3=maxsum2; maxsum2=maxsum; maxsum=sum;}
             else if (sum>maxsum2 && sum<=maxsum) {maxsum3=maxsum2; maxsum2=sum;}
             else if (sum>maxsum3 && sum<=maxsum2) {maxsum3=sum;}
-            index+=1;
             sum=0;
          } else {
             sum=sum+stoi(bd);

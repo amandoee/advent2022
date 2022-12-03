@@ -108,8 +108,6 @@ int main() {
             elf="";
             me="";
 
-
-            cout << alle_numre << "\n"; //print the data of the string
                while (alle_numre!="") {
                 if (alle_numre.find_first_of(",")==1 || alle_numre.find_first_of(" ")==1) {
 

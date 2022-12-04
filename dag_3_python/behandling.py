@@ -18,4 +18,5 @@ with open("input.txt") as input:
                 test = element.isupper
         found=0
     print(sum)
-    print('C'.isupper)
+
+    #MANGLER DEL 2. BØR VÆRE NEMT NOK

@@ -15,7 +15,7 @@ with open("input.txt") as input2:
                     found=True
         for a in range(13,len(item)):
                 strings =[item[a-13],item[a-12],item[a-11],item[a-10],item[a-9],item[a-8],item[a-7],item[a-6],item[a-5],item[a-4],item[a-3],item[a-2],item[a-1],item[a]]
-                if (are_strings_different(strings,13) and found2==False):
+                if (are_strings_different(strings,14) and found2==False):
                     print(strings)
                     print(a+1)
                     found2=True

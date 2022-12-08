@@ -56,7 +56,7 @@ with open("input.txt") as input2:
                     
 
 
-                last_command="cd .."
+                    last_command="cd .."
                 print(counter*command_indent, line, end="")
                 f.write(counter*command_indent+line)
                 counter-=1

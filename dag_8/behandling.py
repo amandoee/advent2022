@@ -20,6 +20,7 @@ with open("input.txt") as input2:
         booly.append(boolx)
 
 
+
 def find_nummer(række_nummer,kolonne_nummer):
     nummer=int(y[række_nummer][kolonne_nummer])
 
